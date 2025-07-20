@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: process.env.REACT_APP_API_BASE_URL,
     headers: {
         "Content-Type": "application/json",
     },
@@ -25,12 +25,12 @@ api.interceptors.response.use(
     }
 );
 
-export const postFormData = (url, formData, config = {}) => {
-    return axios.post(url, formData, {
-        baseURL: "http://localhost:8080",
-        headers: {
-        },
-    }).then(response => response.data);
+export const postFormData = async (url, formData, config = {}) => {
+    const response = await axios.post(url, formData, {
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        headers: {},
+    });
+    return response.data;
 }
 
 export const imageUpload = {

@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { imageUpload } from "../services/api";
 import "../styles/ImageUpload.css";
 import { useNavigate } from "react-router-dom";
-import { formatFileSize } from "../utils/utils";
+import { formatFileSize, setPageTitle } from "../utils/utils";
 import { MAX_FILE_SIZE } from "../utils/constants";
 
 const ImageUpload = () => {
@@ -15,6 +15,11 @@ const ImageUpload = () => {
   const navigate = useNavigate();
 
   const fileInputRef = useRef(null);
+
+  // 페이지 제목
+  useEffect(() => {
+    setPageTitle("이미지 업로드");
+  }, []);
 
   // 파일 선택 처리
   const handleFileSelect = (event) => {

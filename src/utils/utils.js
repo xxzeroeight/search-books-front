@@ -21,3 +21,8 @@ export const formatDate = (dateString) => {
 
   return `${year}년 ${month}월 ${day}일`;
 };
+
+export const setPageTitle = (title) => {
+  const titleElement = document.getElementsByTagName('title')[0];
+  titleElement.textContent = title || process.env.REACT_APP_NAME;
+};

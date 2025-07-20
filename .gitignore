@@ -2,7 +2,8 @@
 
 # 환경 변수
 .env
-.env.example
+.env.local
+.env.production
 
 # dependencies
 /node_modules
@@ -91,5 +92,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,react,windows.env
-.env.exaple
-.env.example

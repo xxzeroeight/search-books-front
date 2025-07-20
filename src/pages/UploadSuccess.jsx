@@ -1,11 +1,18 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/UploadSuccess.css";
+import { useEffect } from "react";
+import { setPageTitle } from "../utils/utils";
 
 const UploadSuccess = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
     const { uploadResult, fileName, fileSize, fileType } = location.state || {};
+
+    // 페이지 제목
+    useEffect(() => {
+        setPageTitle("업로드 성공");
+    }, []);
 
     const getImageUrl = (imageUrl) => {
         if (!imageUrl || imageUrl.trim() === '') {
