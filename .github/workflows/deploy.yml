@@ -30,6 +30,9 @@ jobs:
         - name: Create environment file
           run: |
             echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" >> .env.production
+            echo "REACT_APP_DEBUG_MODE=false" >> .env.production
+            echo "REACT_APP_LOG_LEVEL=error" >> .env.production
+            echo "GENERATE_SOURCEMAP=false" >> .env.production
             echo "Environment file created: "
             cat .env.production
 
