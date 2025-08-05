@@ -18,31 +18,31 @@ ISBN은 전 세계적으로 출판되는 모든 도서에 부여되는 고유한
 - npm 8.0.0 이상
 
 ### 로컬 개발환경 설정
-1. 저장소 클론
+- 저장소 클론
     ```
     git clone https://github.com/your-username/books.git
     
     cd books
     ```
-2. 의존성 설치
+- 의존성 설치
     ```bash
     npm install
     ```
-3. 환경변수 설정
+- 환경변수 설정
     ```bash
     cp .env.example .env
     ```
-4. 개발 서버 실행
+- 개발 서버 실행
     ```bash
     npm start
     ```
 
 ### 빌드 및 배포
-1. 프로덕션 빌드
+- 프로덕션 빌드
     ```bash
     npm run build
     ```
-2. Firebase 배포
+- Firebase 배포
     ```bash
     npm run deploy
     ```
