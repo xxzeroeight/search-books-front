@@ -39,6 +39,6 @@ export const imageUpload = {
         const formData = new FormData();
         formData.append("image", image);
     
-        return postFormData(SEARCH_BOOKS_BACKEND_API, formData);
+        return postFormData("api/books/images", formData);
     },
 }
