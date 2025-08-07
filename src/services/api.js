@@ -1,5 +1,4 @@
 import axios from "axios";
-import { SEARCH_BOOKS_BACKEND_API } from "../utils/constants";
 
 const api = axios.create({
     baseURL: process.env.REACT_APP_API_BASE_URL,
