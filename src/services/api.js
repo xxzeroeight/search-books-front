@@ -1,4 +1,5 @@
 import axios from "axios";
+import { SEARCH_BOOKS_BACKEND_API } from "../utils/constants";
 
 const api = axios.create({
     baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -38,6 +39,6 @@ export const imageUpload = {
         const formData = new FormData();
         formData.append("image", image);
     
-        return postFormData("/api/books/extract-and-save", formData);
+        return postFormData(SEARCH_BOOKS_BACKEND_API, formData);
     },
 }
