@@ -38,6 +38,6 @@ export const imageUpload = {
         const formData = new FormData();
         formData.append("image", image);
     
-        return postFormData("api/books/images", formData);
+        return postFormData("api/books/save-and-extract", formData);
     },
 }
